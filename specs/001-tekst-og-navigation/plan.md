@@ -142,6 +142,7 @@ interface Ayah {
   sura: number
   aya: number
   text: string // Uthmani, uændret fra Tanzil
+  bismillah?: string // kun på vers 1, når suraen har Bismillah som overskrift
   juz: number // 1–30
   page: number // 1–604
 }
@@ -167,8 +168,9 @@ versionsnummer (`{ "v": 1, ... }`), så vi senere kan ændre formatet uden at mi
 ### Bismillah (Historie 1, test 4)
 
 Bismillah vises som en overskrift over alle suraer undtagen 1 og 9. I sura 1 er den selve vers 1.
-⚠️ **Skal tjekkes i opgave 1:** Hvordan markerer Tanzils XML Bismillah (fx som en egen
-attribut)? Vi må ikke fjerne tekst fra et vers.
+✅ **Tjekket (T005):** Tanzil har Bismillah som en egen attribut `bismillah="..."` på vers 1
+(112 suraer). Den er ikke en del af versets tekst, så vi viser attributten som overskrift og
+fjerner intet fra teksten. Se [`data/tanzil/README.md`](../../data/tanzil/README.md).
 
 ### Versmærke (FR-004)
 
@@ -227,5 +229,6 @@ navn og ikon gør appen installerbar.
 ## 11. Åbne punkter
 
 1. ✅ ~~Er appen gratis og ikke-kommerciel?~~ Ja. Besluttet 2026-09-23.
-2. **[TJEKKES I OPGAVE 1]** Hvordan Bismillah er markeret i Tanzils XML (se afsnit 7).
-3. **[SENERE]** Hvor appen skal ligge på nettet (fx GitHub Pages eller Netlify). Det behøver vi ikke vide, før fase 1 er færdig.
+2. ✅ ~~Hvordan er Bismillah markeret i Tanzils XML?~~ Som en egen attribut, se afsnit 7.
+3. ⚠️ **Nyt (T005):** `en.sahih.xml` er ikke gyldig XML (`--` i kommentaren). Byggescriptet skal fjerne kommentaren i hukommelsen før parsing.
+4. **[SENERE]** Hvor appen skal ligge på nettet (fx GitHub Pages eller Netlify). Det behøver vi ikke vide, før fase 1 er færdig.

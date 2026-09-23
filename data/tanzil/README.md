@@ -59,3 +59,40 @@ TERMS OF USE:
 > If used otherwise, you need to obtain necessary permission from the translator or the publisher.
 
 Appen er gratis og ikke-kommerciel (constitution, princip 2), så vilkåret er opfyldt.
+
+## Filernes format (undersøgt i T005)
+
+### Tekstfilerne (`quran-uthmani.xml`, `quran-simple-clean.xml`)
+
+```xml
+<quran>
+  <sura index="2" name="البقرة">
+    <aya index="1" text="الٓمٓ" bismillah="بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ" />
+    <aya index="2" text="..." />
+```
+
+- 114 `<sura>` og 6.236 `<aya>` i begge filer. Versene har kun attributterne `index`, `text` og `bismillah`.
+- **Bismillah** er en **egen attribut** (`bismillah="..."`) på vers 1 i 112 suraer. Den er **ikke** en del af versets `text`.
+  - Sura 1 har ingen attribut, fordi Bismillah _er_ vers 1 (`text`).
+  - Sura 9 har ingen Bismillah.
+  - → Vi viser attributten som overskrift og behøver ikke fjerne noget fra teksten (princip 1 overholdt).
+
+### Metadata (`quran-data.xml`)
+
+| Element                   | Antal | Eksempel                                                                                                              |
+| ------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------- |
+| `<sura>`                  | 114   | `index="2" ayas="286" start="7" name="البقرة" tname="Al-Baqara" ename="The Cow" type="Medinan" order="87" rukus="40"` |
+| `<juz>`                   | 30    | `index="2" sura="2" aya="142"` (første vers i juz'en)                                                                 |
+| `<quarter>` (i `<hizbs>`) | 240   | `index="2" sura="2" aya="26"`                                                                                         |
+| `<page>`                  | 604   | `index="2" sura="2" aya="1"` (første vers på siden)                                                                   |
+| `<sajda>`                 | 15    | `index="1" sura="7" aya="206" type="recommended"`                                                                     |
+
+- `type` er `Meccan` eller `Medinan`, præcis som i vores datamodel.
+- `tname` er den translittererede form, fx "Al-Baqara".
+- Juz og side er angivet ved deres **første vers**. Et vers' juz eller side findes altså ved at tage den sidste juz/side, der starter før eller på verset.
+
+### Oversættelsen (`en.sahih.xml`)
+
+- Samme struktur som tekstfilerne: 114 `<sura>` med `name=""` og 6.236 `<aya>` med `index` og `text`. Der er ingen `bismillah`-attribut.
+- ⚠️ **Filen er ikke gyldig XML.** Kommentaren øverst indeholder `--` (i linjen `# ------`), og det er ulovligt i en XML-kommentar. En streng XML-parser fejler derfor på linje 4.
+  → Byggescriptet (T007) skal fjerne den første kommentar **i hukommelsen** før parsing. Selve filen ændres ikke.

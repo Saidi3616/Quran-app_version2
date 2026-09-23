@@ -45,7 +45,7 @@ _Resultat: Koranens tekst ligger i projektet, og testene beviser, at den er korr
       Filerne er: Uthmani-tekst (XML), Simple Clean-tekst (XML), Quran-metadata (XML) og Sahih International `en.sahih` (XML).
       **Færdig når:** de fire filer og README'en er committet.
 
-- [ ] **T005 · Undersøg filernes format**
+- [x] **T005 · Undersøg filernes format**
       Åbn filerne og beskriv deres struktur i `data/tanzil/README.md`. Find især ud af, **hvordan Bismillah er markeret** (plan, afsnit 7).
       _Du lærer:_ at læse XML og at undersøge data, før man skriver kode.
       **Færdig når:** plan.md afsnit 11, punkt 2, er besvaret og krydset af.
