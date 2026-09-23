@@ -50,7 +50,7 @@ _Resultat: Koranens tekst ligger i projektet, og testene beviser, at den er korr
       _Du lærer:_ at læse XML og at undersøge data, før man skriver kode.
       **Færdig når:** plan.md afsnit 11, punkt 2, er besvaret og krydset af.
 
-- [ ] **T006 · Datatyper**
+- [x] **T006 · Datatyper**
       Skriv `Sura`, `Ayah`, `VerseKey` osv. i `src/quran/types.ts` (plan, afsnit 6).
       **Færdig når:** filen kan kompileres (`npm run build`).
 

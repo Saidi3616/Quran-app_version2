@@ -133,7 +133,7 @@ type VerseKey = `${number}:${number}` // fx "2:255"
 interface Sura {
   number: number // 1–114
   nameArabic: string // "البقرة"
-  nameTransliterated: string // "Al-Baqarah"
+  nameTransliterated: string // "Al-Baqara"
   ayahCount: number
   revelation: 'Meccan' | 'Medinan'
 }
@@ -145,6 +145,12 @@ interface Ayah {
   bismillah?: string // kun på vers 1, når suraen har Bismillah som overskrift
   juz: number // 1–30
   page: number // 1–604
+}
+
+interface TranslatedAyah {
+  sura: number
+  aya: number
+  text: string // Sahih International, uændret fra Tanzil
 }
 
 interface Bookmark {
