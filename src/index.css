@@ -1,10 +1,57 @@
+/* Global styles. Colours are CSS variables (plan, section 7 · FR-015). */
+
 :root {
-  font-family: system-ui, sans-serif;
-  line-height: 1.5;
+  --color-bg: #fbfaf7;
+  --color-surface: #ffffff;
+  --color-text: #1f2328;
+  --color-muted: #5c6370;
+  --color-border: #e3e0d8;
+  --color-accent: #1d6b57;
+
+  --font-ui: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-arabic: 'Amiri Quran', serif;
+  --arabic-font-size: 28px;
+
+  --space: 16px;
+  --content-width: 720px;
+
   color-scheme: light dark;
+}
+
+/* Follows the phone's dark mode. A manual switch comes in T022. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #15181c;
+    --color-surface: #1d2126;
+    --color-text: #e8e6e1;
+    --color-muted: #9aa0a8;
+    --color-border: #2e333a;
+    --color-accent: #5cc4a5;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  padding: 16px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-ui);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+/* Arabic text: right to left, in Amiri Quran (FR-003). */
+.arabic {
+  direction: rtl;
+  font-family: var(--font-arabic);
+  font-size: var(--arabic-font-size);
+  line-height: 2.2;
 }

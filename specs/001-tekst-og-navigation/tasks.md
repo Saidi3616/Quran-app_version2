@@ -74,7 +74,7 @@ _Resultat: Koranens tekst ligger i projektet, og testene beviser, at den er korr
 
 _Resultat: Du kan åbne appen og læse Koranen._ 🎉
 
-- [ ] **T010 · Skrifttype og grundlayout**
+- [x] **T010 · Skrifttype og grundlayout**
       Installer `@fontsource/amiri-quran`, og læg licensfilen ved. Lav et grundlayout med topbar og indhold, bygget til 360 px (NFR-003).
       **Færdig når:** arabisk tekst vises i Amiri Quran.
 
