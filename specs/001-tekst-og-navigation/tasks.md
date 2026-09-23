@@ -31,7 +31,7 @@ _Resultat: Et tomt React-projekt, der kører, og hvor testene er sat op._
       Sæt Prettier op (oxlint følger med fra T001). Tilføj scriptet `format`.
       **Færdig når:** `npm run lint` og `npm run format:check` kører uden fejl.
 
-- [ ] **T003 · Testværktøjer**
+- [x] **T003 · Testværktøjer**
       Sæt Vitest + Testing Library og Playwright op. Skriv én "hello world"-test af hver slags.
       _Du lærer:_ hvad en test er, og hvorfor vi skriver dem.
       **Færdig når:** `npm test` og `npm run test:e2e` er grønne.
