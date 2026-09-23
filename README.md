@@ -2,6 +2,8 @@
 
 En web-app (PWA) til at læse, lytte til og forstå Koranen, og som hjælper med udenadslære (hifz).
 
+**Prøv appen:** https://saidi3616.github.io/Quran-app_version2/ (opdateres automatisk ved hvert push, når alle tests er grønne).
+
 Projektet bygges med **Spec-Driven Development (SDD)**: vi skriver først _hvad_ appen skal
 kunne (specifikationen) og bygger derefter koden ud fra den. Start med at læse
 [`specs/README.md`](specs/README.md).

@@ -102,7 +102,7 @@ _Resultat: Appen kan ses på en offentlig adresse og opdateres automatisk. Bruge
       Siden viser kilder og licenser med link til Tanzil.net og kreditering af oversætter og skrifttype. Footeren nævner Tanzil på alle sider.
       **Færdig når:** siden viser alt det, som licenserne kræver, og accepttesten for FR-017 er grøn.
 
-- [ ] **T030 · Udgiv på GitHub Pages** _(plan, afsnit 12)_
+- [x] **T030 · Udgiv på GitHub Pages** _(plan, afsnit 12)_
       Workflowet kører alle tests og udgiver derefter appen. Direkte links som `/sura/2` skal virke.
       **Færdig når:** appen kan åbnes på `https://saidi3616.github.io/Quran-app_version2/`, også via et direkte link til en sura.
 
