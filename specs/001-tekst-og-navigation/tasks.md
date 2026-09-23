@@ -58,7 +58,7 @@ _Resultat: Koranens tekst ligger i projektet, og testene beviser, at den er korr
       Skriv `scripts/build-data.ts`, der læser filerne i `data/tanzil/` og skriver `public/data/suras.json`, `quran-uthmani.json`, `quran-clean.json` og `en.sahih.json`. Scriptet kører automatisk før `dev` og `build`.
       **Færdig når:** JSON-filerne bliver lavet, og `public/data/` er med i `.gitignore`, fordi de genereres.
 
-- [ ] **T008 · Test af dataintegritet** _(SC-003, SC-004)_
+- [x] **T008 · Test af dataintegritet** _(SC-003, SC-004)_
       Test at:
   - der er 114 suraer og 6.236 vers
   - 20 stikprøvevers er **tegn for tegn** identiske med XML-filen

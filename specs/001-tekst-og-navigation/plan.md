@@ -178,6 +178,15 @@ Bismillah vises som en overskrift over alle suraer undtagen 1 og 9. I sura 1 er 
 (112 suraer). Den er ikke en del af versets tekst, så vi viser attributten som overskrift og
 fjerner intet fra teksten. Se [`data/tanzil/README.md`](../../data/tanzil/README.md).
 
+### Ingen Unicode-normalisering af teksten (fundet i T008)
+
+Tanzils tekst er **ikke** Unicode-normaliseret. I `ٱللَّهِ` står shadda (U+0651) fx _før_ fatha
+(U+064E). Hvis man kører `text.normalize()` (NFC), bytter de plads, og **5.748 af 6.236 vers
+ændres**. Det ser ens ud på skærmen, men teksten er ikke længere identisk med kilden.
+
+**Regel:** Teksten, der **vises**, må aldrig normaliseres. Normalisering må kun ske på en
+_kopi_, der bruges til søgning (T023). En test i `scripts/data-integrity.test.ts` vogter over reglen.
+
 ### Versmærke (FR-004)
 
 Efter hvert vers indsætter vi `۝` (U+06DD) efterfulgt af versnummeret med arabiske cifre (fx `١٢`).
