@@ -25,7 +25,7 @@ når vi når til featuren**. Indtil da er beskrivelsen her kun en overskrift.
 
 | Fase | Feature | Indhold | Status |
 |------|---------|---------|--------|
-| **1. Tekst og navigation** | [`001-tekst-og-navigation`](001-tekst-og-navigation/spec.md) | Uthmani-tekst, navigation (sura, vers, juz, side), oversættelser, søgning, bogmærker, "fortsæt læsning", skriftstørrelse, dark mode | 📝 Spec i udkast |
+| **1. Tekst og navigation** | [`001-tekst-og-navigation`](001-tekst-og-navigation/spec.md) | Uthmani-tekst, navigation (sura, vers, juz, side), engelsk oversættelse, søgning, bogmærker, "fortsæt læsning", skriftstørrelse, dark mode | 📝 Spec i udkast |
 | **2. Lyd** | `002-lyd` | Flere reciters, afspilning vers for vers med fremhævning, gentagelse af vers og udsnit, download til offline | ⏳ |
 | **3. Forståelse** | `003-forstaaelse` | Tafsir, ord-for-ord-oversættelse (tryk på et ord), tajweed-farver | ⏳ |
 | **3. Læring** | `004-hifz` | Hifz-tilstand: skjul vers, test dig selv, følg fremskridt | ⏳ |
@@ -50,7 +50,7 @@ besluttes i hver features `plan.md`. Vi ved allerede nu:
 
 | Risiko | Fase | Hvorfor |
 |--------|------|---------|
-| Dansk oversættelse med tilladelse | 1 | Der findes få danske oversættelser, og de kan være ophavsretligt beskyttet. |
+| Licens til engelsk oversættelse | 1 | Mange kendte engelske oversættelser er ophavsretligt beskyttet. Vi skal finde én, vi har lov til at bruge. |
 | Offline lyd fylder meget | 2 | Hele Koranen med én reciter fylder flere hundrede MB. Brugeren skal kunne vælge, hvad der downloades. |
 | Tajweed-farver kræver særlige data | 3 | Farverne skal komme fra en kilde, hvor tajweed-reglerne allerede er markeret. Vi laver dem ikke selv. |
 | Notifikationer i en web-app | 5 | På iPhone virker notifikationer kun, hvis appen er lagt på hjemmeskærmen. |

@@ -15,7 +15,7 @@
 ## 1. Formål
 
 Dette er fundamentet for hele appen. Brugeren skal kunne læse den arabiske tekst korrekt og
-pænt i Uthmani-skrift, finde et hvilket som helst sted i Koranen, læse en oversættelse, søge og
+pænt i Uthmani-skrift, finde et hvilket som helst sted i Koranen, læse en engelsk oversættelse, søge og
 altid vende tilbage til det sted, hvor vedkommende slap.
 
 Alt i de senere faser (lyd, tafsir, hifz) bygger oven på det, vi laver her.
@@ -44,12 +44,12 @@ Historierne er prioriteret. **P1** skal virke, før vi går videre til P2 og så
 5. **Givet** at jeg læser, **så** kan jeg altid se, hvilken sura, juz og side jeg er på.
 
 ### Historie 3: Læs en oversættelse (P2)
-*Som læser vil jeg se en oversættelse under hvert vers, så jeg forstår, hvad jeg læser.*
+*Som læser vil jeg se en engelsk oversættelse under hvert vers, så jeg forstår, hvad jeg læser.*
 
 **Accepttest**
-1. **Givet** indstillingerne, **når** jeg vælger en oversættelse fra listen (fx dansk eller engelsk), **så** vises den under hvert arabisk vers.
-2. **Givet** at en oversættelse er valgt, **når** jeg slår oversættelse fra, **så** vises kun den arabiske tekst.
-3. **Givet** at jeg har valgt en oversættelse, **når** jeg åbner appen igen, **så** er mit valg husket.
+1. **Givet** indstillingerne, **når** jeg slår oversættelse til, **så** vises den engelske oversættelse under hvert arabisk vers.
+2. **Givet** at oversættelsen vises, **når** jeg slår den fra, **så** vises kun den arabiske tekst.
+3. **Givet** at jeg har slået oversættelsen til eller fra, **når** jeg åbner appen igen, **så** er mit valg husket.
 4. **Givet** en oversættelse, **så** kan jeg se oversætterens navn og kilden.
 
 ### Historie 4: Bogmærker og "fortsæt læsning" (P2)
@@ -69,7 +69,7 @@ Historierne er prioriteret. **P1** skal virke, før vi går videre til P2 og så
 1. **Givet** søgefeltet, **når** jeg skriver et suranavn eller -nummer (fx "Yasin" eller "36"), **så** vises den sura.
 2. **Givet** søgefeltet, **når** jeg skriver et arabisk ord, **så** vises alle vers, der indeholder ordet, med sura og versnummer.
 3. **Givet** at jeg skriver det arabiske ord **uden** tashkeel (vokaltegn), **så** finder jeg stadig vers, hvor ordet står **med** tashkeel i Uthmani-teksten.
-4. **Givet** at en oversættelse er valgt, **når** jeg skriver et ord på dansk eller engelsk (fx "barmhjertig"), **så** vises de vers, hvor ordet står i oversættelsen, uanset store og små bogstaver.
+4. **Givet** søgefeltet, **når** jeg skriver et engelsk ord (fx "merciful"), **så** vises de vers, hvor ordet står i oversættelsen, uanset store og små bogstaver.
 5. **Givet** søgeresultater, **så** er søgeordet fremhævet, og et tryk åbner verset i læsevisningen.
 6. **Givet** at intet findes, **så** vises beskeden "Ingen resultater".
 
@@ -91,13 +91,13 @@ Historierne er prioriteret. **P1** skal virke, før vi går videre til P2 og så
 | FR-004 | Hvert vers SKAL afsluttes med et tydeligt arabisk versmærke med versnummer. | 1 |
 | FR-005 | Brugeren SKAL kunne navigere direkte til sura, sura:vers, juz (1–30) og mushaf-side (1–604). | 2 |
 | FR-006 | Læsevisningen SKAL vise aktuel sura, juz og side. | 2 |
-| FR-007 | Systemet SKAL tilbyde mindst én dansk og én engelsk oversættelse, som brugeren kan vælge imellem eller slå fra. [AFKLARES: hvilke?] | 3 |
-| FR-008 | Oversætter og kilde SKAL vises for den valgte oversættelse. | 3 |
+| FR-007 | Systemet SKAL tilbyde en engelsk oversættelse, som brugeren kan slå til og fra. Der er ingen oversættelser på andre sprog. [AFKLARES: hvilken?] | 3 |
+| FR-008 | Oversætter og kilde SKAL vises for oversættelsen. | 3 |
 | FR-009 | Brugeren SKAL kunne tilføje, se og fjerne bogmærker på versniveau. | 4 |
 | FR-010 | Systemet SKAL automatisk huske seneste læseposition og tilbyde "Fortsæt læsning". | 4 |
 | FR-011 | Brugeren SKAL kunne søge efter sura via navn eller nummer. | 5 |
 | FR-012 | Brugeren SKAL kunne søge i den arabiske tekst, og søgningen SKAL ignorere tashkeel og Uthmani-specialtegn. | 5 |
-| FR-013 | Brugeren SKAL kunne søge i den valgte oversættelse uden hensyn til store og små bogstaver. | 5 |
+| FR-013 | Brugeren SKAL kunne søge i den engelske oversættelse uden hensyn til store og små bogstaver. | 5 |
 | FR-014 | Brugeren SKAL kunne justere skriftstørrelsen for arabisk og oversættelse hver for sig. | 6 |
 | FR-015 | Appen SKAL understøtte lyst tema, mørkt tema og "følg system". | 6 |
 | FR-016 | Alle brugerdata og indstillinger SKAL gemmes lokalt og overleve genstart. | 4, 6 |
@@ -107,7 +107,7 @@ Historierne er prioriteret. **P1** skal virke, før vi går videre til P2 og så
 
 | ID | Krav |
 |----|------|
-| NFR-001 | **Offline:** Efter første besøg kan hele den arabiske tekst og den valgte oversættelse læses og søges i uden internet. |
+| NFR-001 | **Offline:** Efter første besøg kan hele den arabiske tekst og den engelske oversættelse læses og søges i uden internet. |
 | NFR-002 | **Hastighed:** En sura åbnes, og et søgeresultat vises, på under 1 sekund på en almindelig telefon. |
 | NFR-003 | **Mobil først:** Alt kan bruges på en skærm, der er 360 px bred, uden vandret scroll. |
 | NFR-004 | **Installerbar:** Appen kan lægges på telefonens hjemmeskærm (PWA). |
@@ -122,10 +122,10 @@ Her står *hvad* vi gemmer, ikke *hvordan*.
 - **Vers (Ayah):** sura-nummer, versnummer, Uthmani-tekst, juz, side. Identificeres entydigt som `sura:vers`, fx `2:255`.
 - **Juz:** nummer (1–30) og hvilket vers den starter ved.
 - **Side:** nummer (1–604) og hvilket vers den starter ved (standard Madani-mushaf).
-- **Oversættelse:** navn, sprog, oversætter, kilde, licens og teksten til hvert vers.
+- **Oversættelse (engelsk):** navn, oversætter, kilde, licens og teksten til hvert vers.
 - **Bogmærke:** henvisning til et vers og tidspunktet, det blev oprettet.
 - **Læseposition:** det seneste vers, brugeren var ved.
-- **Indstillinger:** valgt oversættelse, skriftstørrelser og tema.
+- **Indstillinger:** oversættelse til/fra, skriftstørrelser og tema.
 
 ## 6. Uden for denne fase
 
@@ -150,11 +150,11 @@ Fase 1 er færdig, når:
 
 ### Besluttet
 - ✅ Teksten vises i **Uthmani-skrift**.
+- ✅ Der er **kun engelsk** oversættelse (ingen dansk).
 - ✅ Gentagelse af vers og udsnit hører til **fase 2 (lyd)**.
 - ✅ Flere reciters hører til **fase 2**. Valget af reciters træffes der.
 
 ### Åbne spørgsmål (lektie til dig)
 1. **[AFKLARES]** Skal menuer og knapper være på **dansk**, **engelsk** eller begge dele (brugeren vælger)?
-2. **[AFKLARES]** Hvilken **dansk** og hvilken **engelsk** oversættelse? (Hvis du ikke kender nogen, undersøger vi licenserne sammen i `plan.md`.)
-3. **[AFKLARES]** Skal man kunne vise **to oversættelser på én gang** (fx dansk og engelsk under hinanden), eller er én ad gangen nok?
-4. **[AFKLARES]** Skal skriftstørrelse og dark mode blive i fase 1? Jeg har lagt dem her, fordi de er små at lave og hører med til god læsbarhed fra dag ét. I din plan lå de i fase 4.
+2. **[AFKLARES]** Hvilken **engelsk** oversættelse? (fx Sahih International eller The Clear Quran). Hvis du ikke har et ønske, undersøger vi licenserne sammen i `plan.md`.
+3. **[AFKLARES]** Skal skriftstørrelse og dark mode blive i fase 1? Jeg har lagt dem her, fordi de er små at lave og hører med til god læsbarhed fra dag ét. I din plan lå de i fase 4.

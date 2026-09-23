@@ -6,7 +6,6 @@ status **✅ Godkendt**. Det følger af princip 1 i [`constitution.md`](constitu
 | Indhold | Kilde | Licens / vilkår | Krav (fx kreditering) | Status |
 |---------|-------|-----------------|------------------------|--------|
 | Arabisk tekst (Uthmani) | [AFKLARES] | [AFKLARES] | | ⏳ Undersøges i `plan.md` for fase 1 |
-| Oversættelse: dansk | [AFKLARES] | [AFKLARES] | | ⏳ |
 | Oversættelse: engelsk | [AFKLARES] | [AFKLARES] | | ⏳ |
 
 ## Sådan tjekker vi en licens
