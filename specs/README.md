@@ -1,17 +1,17 @@
 # Sådan arbejder vi: Spec-Driven Development
 
 I SDD er specifikationen den "sandhed", koden bygges ud fra. Hvis koden og specifikationen
-er uenige, er det koden, der er forkert, eller også skal specifikationen opdateres *først*.
+er uenige, er det koden, der er forkert, eller også skal specifikationen opdateres _først_.
 
 ## De fire trin
 
-| Trin | Fil | Spørgsmål den besvarer | Status |
-|------|-----|------------------------|--------|
-| 0. Principper | [`constitution.md`](constitution.md) | Hvilke regler gælder altid i projektet? | ✅ v1.1 |
-| 0. Vision | [`vision.md`](vision.md) | Hvad er det store mål, og i hvilke faser bygger vi? | ✅ Udkast |
-| 1. Specifikation | [`001-tekst-og-navigation/spec.md`](001-tekst-og-navigation/spec.md) | **Hvad** skal fase 1 kunne, og **hvorfor**? (ingen teknik) | ✅ Klar til plan |
-| 2. Teknisk plan | [`001-tekst-og-navigation/plan.md`](001-tekst-og-navigation/plan.md) | **Hvordan** bygger vi det? (sprog, framework, datakilder) | ✅ Udkast |
-| 3. Opgaveliste | [`001-tekst-og-navigation/tasks.md`](001-tekst-og-navigation/tasks.md) | Hvilke små, testbare skridt skal vi tage, og i hvilken rækkefølge? | ✅ 29 opgaver |
+| Trin             | Fil                                                                    | Spørgsmål den besvarer                                             | Status           |
+| ---------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------- |
+| 0. Principper    | [`constitution.md`](constitution.md)                                   | Hvilke regler gælder altid i projektet?                            | ✅ v1.1          |
+| 0. Vision        | [`vision.md`](vision.md)                                               | Hvad er det store mål, og i hvilke faser bygger vi?                | ✅ Udkast        |
+| 1. Specifikation | [`001-tekst-og-navigation/spec.md`](001-tekst-og-navigation/spec.md)   | **Hvad** skal fase 1 kunne, og **hvorfor**? (ingen teknik)         | ✅ Klar til plan |
+| 2. Teknisk plan  | [`001-tekst-og-navigation/plan.md`](001-tekst-og-navigation/plan.md)   | **Hvordan** bygger vi det? (sprog, framework, datakilder)          | ✅ Udkast        |
+| 3. Opgaveliste   | [`001-tekst-og-navigation/tasks.md`](001-tekst-og-navigation/tasks.md) | Hvilke små, testbare skridt skal vi tage, og i hvilken rækkefølge? | ✅ 29 opgaver    |
 
 Derefter kommer **4. Implementering**: vi tager én opgave ad gangen fra `tasks.md`.
 

@@ -1,13 +1,13 @@
 # Teknisk plan 001: Tekst og navigation
 
-| | |
-|---|---|
-| **Spec** | [`spec.md`](spec.md) |
-| **Status** | Udkast |
-| **Oprettet** | 2026-09-23 |
+|              |                      |
+| ------------ | -------------------- |
+| **Spec**     | [`spec.md`](spec.md) |
+| **Status**   | Udkast               |
+| **Oprettet** | 2026-09-23           |
 
 > `spec.md` beskriver **hvad**. Dette dokument beskriver **hvordan**.
-> Hvert valg har en begrundelse, så vi senere kan huske, *hvorfor* vi valgte, som vi gjorde.
+> Hvert valg har en begrundelse, så vi senere kan huske, _hvorfor_ vi valgte, som vi gjorde.
 
 ---
 
@@ -20,38 +20,38 @@ indstillinger gemmes i browserens `localStorage`.
 
 ## 2. Ordliste for begyndere
 
-| Ord | Betydning |
-|-----|-----------|
-| **PWA** (Progressive Web App) | En hjemmeside, der kan installeres på telefonen og virke offline, næsten som en rigtig app. |
-| **Service worker** | Et lille script, som browseren kører i baggrunden. Det gemmer appens filer, så den kan åbnes uden internet. |
-| **React** | Et bibliotek til at bygge brugerflader af små genbrugelige dele, som kaldes *komponenter*. |
-| **TypeScript** | JavaScript med *typer*. Editoren fanger mange fejl, før du overhovedet kører koden. |
-| **Vite** | Et byggeværktøj, der starter en udviklingsserver på et sekund og pakker appen til udgivelse. |
-| **JSON** | Et simpelt tekstformat til data, fx `{"sura": 1, "aya": 1, "text": "..."}`. |
-| **localStorage** | Et lille lager i browseren, der husker data på brugerens enhed, også efter genstart. |
+| Ord                           | Betydning                                                                                                   |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| **PWA** (Progressive Web App) | En hjemmeside, der kan installeres på telefonen og virke offline, næsten som en rigtig app.                 |
+| **Service worker**            | Et lille script, som browseren kører i baggrunden. Det gemmer appens filer, så den kan åbnes uden internet. |
+| **React**                     | Et bibliotek til at bygge brugerflader af små genbrugelige dele, som kaldes _komponenter_.                  |
+| **TypeScript**                | JavaScript med _typer_. Editoren fanger mange fejl, før du overhovedet kører koden.                         |
+| **Vite**                      | Et byggeværktøj, der starter en udviklingsserver på et sekund og pakker appen til udgivelse.                |
+| **JSON**                      | Et simpelt tekstformat til data, fx `{"sura": 1, "aya": 1, "text": "..."}`.                                 |
+| **localStorage**              | Et lille lager i browseren, der husker data på brugerens enhed, også efter genstart.                        |
 
 ## 3. Tekniske valg
 
-| Område | Valg | Hvorfor | Fravalgt (og hvorfor) |
-|--------|------|---------|------------------------|
-| Sprog | **TypeScript** | Typerne hjælper en begynder med at undgå fejl, og de fungerer også som dokumentation. | JavaScript: fejl opdages først, når koden kører. |
-| UI | **React** | Det mest udbredte UI-bibliotek, så der findes flest guides og svar på nettet. | Vue/Svelte: også gode, men har færre ressourcer. |
-| Byggeværktøj | **Vite** | Hurtigt, enkelt og standardvalget til nye React-projekter. | Next.js: har server-funktioner, vi ikke har brug for. |
-| Navigation | **React Router** | Giver hver visning sin egen URL, så man kan dele og bogmærke links i browseren. | – |
-| Offline/PWA | **vite-plugin-pwa** | Laver service worker og manifest automatisk. | At skrive service workeren selv, hvilket er svært og fejlbehæftet. |
-| Arabisk skrift | **Amiri Quran**, lagt ind i appen | Designet til Koranens tekst, understøtter Uthmani-tegn og versmærket ۝, og licensen (SIL OFL) er fri. Når skriften ligger i appen, virker den også offline. | At hente skriften fra Google Fonts: virker ikke offline. KFGQPC-skrifter: licensen er uklar. |
-| Lokale data | **localStorage** | Bogmærker og indstillinger fylder kun få KB, og API'et er meget simpelt. | IndexedDB: kraftigere, men mere kompliceret, og det har vi ikke brug for endnu. |
-| Test | **Vitest** + **Testing Library** (enheder), **Playwright** (accepttests) | Vitest passer til Vite. Playwright styrer en rigtig browser og kan dermed køre spec'ens *Givet/Når/Så*-tests. | – |
-| Kodekvalitet | **ESLint** + **Prettier** | Finder fejl og formaterer koden ens hver gang. | – |
+| Område         | Valg                                                                     | Hvorfor                                                                                                                                                     | Fravalgt (og hvorfor)                                                                                    |
+| -------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Sprog          | **TypeScript**                                                           | Typerne hjælper en begynder med at undgå fejl, og de fungerer også som dokumentation.                                                                       | JavaScript: fejl opdages først, når koden kører.                                                         |
+| UI             | **React**                                                                | Det mest udbredte UI-bibliotek, så der findes flest guides og svar på nettet.                                                                               | Vue/Svelte: også gode, men har færre ressourcer.                                                         |
+| Byggeværktøj   | **Vite**                                                                 | Hurtigt, enkelt og standardvalget til nye React-projekter.                                                                                                  | Next.js: har server-funktioner, vi ikke har brug for.                                                    |
+| Navigation     | **React Router**                                                         | Giver hver visning sin egen URL, så man kan dele og bogmærke links i browseren.                                                                             | –                                                                                                        |
+| Offline/PWA    | **vite-plugin-pwa**                                                      | Laver service worker og manifest automatisk.                                                                                                                | At skrive service workeren selv, hvilket er svært og fejlbehæftet.                                       |
+| Arabisk skrift | **Amiri Quran**, lagt ind i appen                                        | Designet til Koranens tekst, understøtter Uthmani-tegn og versmærket ۝, og licensen (SIL OFL) er fri. Når skriften ligger i appen, virker den også offline. | At hente skriften fra Google Fonts: virker ikke offline. KFGQPC-skrifter: licensen er uklar.             |
+| Lokale data    | **localStorage**                                                         | Bogmærker og indstillinger fylder kun få KB, og API'et er meget simpelt.                                                                                    | IndexedDB: kraftigere, men mere kompliceret, og det har vi ikke brug for endnu.                          |
+| Test           | **Vitest** + **Testing Library** (enheder), **Playwright** (accepttests) | Vitest passer til Vite. Playwright styrer en rigtig browser og kan dermed køre spec'ens _Givet/Når/Så_-tests.                                               | –                                                                                                        |
+| Kodekvalitet   | **oxlint** + **Prettier**                                                | oxlint finder fejl og er standard i Vites skabelon. Prettier formaterer koden ens hver gang.                                                                | ESLint: bruges meget, men er langsommere og kræver mere opsætning. Vites skabelon er skiftet til oxlint. |
 
 ## 4. Datakilde og licens
 
 ### Beslutning: Tanzil.net for fase 1
 
-| Kilde | Fordele | Ulemper | Valg |
-|-------|---------|---------|------|
-| **Tanzil.net** (downloadede filer) | Verificeret Uthmani-tekst. Metadata til suraer, juz og sider (Madani, 604 sider). Sahih International findes. Filerne kan ligge i appen og dermed virke offline. | Har kun tekst og oversættelser (ingen lyd eller tafsir). | ✅ **Valgt** |
-| **Quran Foundation API** (Quran.com) | Meget indhold (lyd, tafsir, ord-for-ord). | Kræver en *client secret*, og den må ikke ligge i en app uden server. Vilkårene tillader kun, at indhold gemmes i **højst 7 dage**, hvilket strider mod vores offline-krav (NFR-001). | ❌ Ikke i fase 1. Vurderes igen i fase 2 og 3. |
+| Kilde                                | Fordele                                                                                                                                                          | Ulemper                                                                                                                                                                               | Valg                                           |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| **Tanzil.net** (downloadede filer)   | Verificeret Uthmani-tekst. Metadata til suraer, juz og sider (Madani, 604 sider). Sahih International findes. Filerne kan ligge i appen og dermed virke offline. | Har kun tekst og oversættelser (ingen lyd eller tafsir).                                                                                                                              | ✅ **Valgt**                                   |
+| **Quran Foundation API** (Quran.com) | Meget indhold (lyd, tafsir, ord-for-ord).                                                                                                                        | Kræver en _client secret_, og den må ikke ligge i en app uden server. Vilkårene tillader kun, at indhold gemmes i **højst 7 dage**, hvilket strider mod vores offline-krav (NFR-001). | ❌ Ikke i fase 1. Vurderes igen i fase 2 og 3. |
 
 ### Licensvilkår (se [`../licenser.md`](../licenser.md))
 
@@ -61,12 +61,12 @@ indstillinger gemmes i browserens `localStorage`.
 
 ### Hvilke filer vi henter
 
-| Fil fra Tanzil | Bruges til |
-|----------------|-----------|
-| Uthmani-tekst (XML) | Visning (FR-002) |
-| *Simple Clean*-tekst (XML) | **Kun** søgning (FR-012), se afsnit 7 |
-| Quran-metadata | Suranavne, antal vers, juz og sider (FR-001, FR-005) |
-| Sahih International (`en.sahih`) | Oversættelse (FR-007) |
+| Fil fra Tanzil                   | Bruges til                                           |
+| -------------------------------- | ---------------------------------------------------- |
+| Uthmani-tekst (XML)              | Visning (FR-002)                                     |
+| _Simple Clean_-tekst (XML)       | **Kun** søgning (FR-012), se afsnit 7                |
+| Quran-metadata                   | Suranavne, antal vers, juz og sider (FR-001, FR-005) |
+| Sahih International (`en.sahih`) | Oversættelse (FR-007)                                |
 
 Filerne gemmes **uændret** i `data/tanzil/`. Et lille script (`scripts/build-data.ts`) omdanner
 dem til JSON i `public/data/`. Scriptet ændrer ikke ét tegn i teksten, det flytter den kun over
@@ -117,42 +117,45 @@ tests/e2e/              Playwright-accepttests, én fil pr. brugerhistorie
 
 ### URL'er (routes)
 
-| URL | Skærm | Spec |
-|-----|-------|------|
-| `/` | Suraliste + "Continue reading" | Historie 1 og 4 |
-| `/sura/:n` og `/sura/:n/:aya` | Læsevisning (ruller til verset) | Historie 1 og 2 |
-| `/juz/:n`, `/page/:n` | Viderestiller til første vers | Historie 2 |
-| `/search?q=…` | Søgning | Historie 5 |
-| `/bookmarks`, `/settings`, `/about` | – | Historie 4 og 6, FR-017 |
+| URL                                 | Skærm                           | Spec                    |
+| ----------------------------------- | ------------------------------- | ----------------------- |
+| `/`                                 | Suraliste + "Continue reading"  | Historie 1 og 4         |
+| `/sura/:n` og `/sura/:n/:aya`       | Læsevisning (ruller til verset) | Historie 1 og 2         |
+| `/juz/:n`, `/page/:n`               | Viderestiller til første vers   | Historie 2              |
+| `/search?q=…`                       | Søgning                         | Historie 5              |
+| `/bookmarks`, `/settings`, `/about` | –                               | Historie 4 og 6, FR-017 |
 
 ## 6. Datamodel (TypeScript)
 
 ```ts
-type VerseKey = `${number}:${number}`;          // fx "2:255"
+type VerseKey = `${number}:${number}` // fx "2:255"
 
 interface Sura {
-  number: number;            // 1–114
-  nameArabic: string;        // "البقرة"
-  nameTransliterated: string;// "Al-Baqarah"
-  ayahCount: number;
-  revelation: "Meccan" | "Medinan";
+  number: number // 1–114
+  nameArabic: string // "البقرة"
+  nameTransliterated: string // "Al-Baqarah"
+  ayahCount: number
+  revelation: 'Meccan' | 'Medinan'
 }
 
 interface Ayah {
-  sura: number;
-  aya: number;
-  text: string;              // Uthmani, uændret fra Tanzil
-  juz: number;               // 1–30
-  page: number;              // 1–604
+  sura: number
+  aya: number
+  text: string // Uthmani, uændret fra Tanzil
+  juz: number // 1–30
+  page: number // 1–604
 }
 
-interface Bookmark { key: VerseKey; createdAt: string }   // ISO-dato
+interface Bookmark {
+  key: VerseKey
+  createdAt: string
+} // ISO-dato
 
 interface Settings {
-  showTranslation: boolean;
-  arabicFontSize: number;
-  translationFontSize: number;
-  theme: "light" | "dark" | "system";
+  showTranslation: boolean
+  arabicFontSize: number
+  translationFontSize: number
+  theme: 'light' | 'dark' | 'system'
 }
 ```
 
@@ -162,28 +165,34 @@ versionsnummer (`{ "v": 1, ... }`), så vi senere kan ændre formatet uden at mi
 ## 7. Særlige løsninger
 
 ### Bismillah (Historie 1, test 4)
+
 Bismillah vises som en overskrift over alle suraer undtagen 1 og 9. I sura 1 er den selve vers 1.
 ⚠️ **Skal tjekkes i opgave 1:** Hvordan markerer Tanzils XML Bismillah (fx som en egen
 attribut)? Vi må ikke fjerne tekst fra et vers.
 
 ### Versmærke (FR-004)
+
 Efter hvert vers indsætter vi `۝` (U+06DD) efterfulgt af versnummeret med arabiske cifre (fx `١٢`).
-Amiri Quran tegner cifrene inde i mærket. Mærket er *vores* visning og ikke en del af teksten,
+Amiri Quran tegner cifrene inde i mærket. Mærket er _vores_ visning og ikke en del af teksten,
 så princip 1 overholdes.
 
 ### Arabisk søgning (FR-012)
+
 Problemet: Uthmani-teksten er fuld af tashkeel og særlige stavemåder, så brugerens `الرحمن`
 matcher ikke `ٱلرَّحْمَـٰنِ`.
 Løsning i to trin:
+
 1. Vi søger i Tanzils **Simple Clean**-tekst (samme vers uden tashkeel), men **viser** resultatet fra Uthmani-teksten.
-2. Både søgeordet og teksten *normaliseres*: tashkeel og tatweel fjernes, og alle alef-former (`أ إ آ ٱ`) laves om til `ا`.
+2. Både søgeordet og teksten _normaliseres_: tashkeel og tatweel fjernes, og alle alef-former (`أ إ آ ٱ`) laves om til `ا`.
 
 ### Søgning i oversættelsen (FR-013)
+
 Vi sammenligner med små bogstaver (`toLowerCase`) og fremhæver det fundne ord. Der er kun
 6.236 vers, så vi kan søge direkte i hukommelsen på under 1 sekund (NFR-002). Et søgeindeks
 er ikke nødvendigt.
 
 ### Tema (FR-015)
+
 Farverne defineres som CSS-variabler. `"system"` bruger `prefers-color-scheme`.
 
 ## 8. Offline (NFR-001, NFR-004)
@@ -194,26 +203,26 @@ navn og ikon gør appen installerbar.
 
 ## 9. Teststrategi
 
-| Niveau | Værktøj | Eksempler |
-|--------|---------|-----------|
-| **Dataintegritet** | Vitest | 114 suraer og 6.236 vers. Et tjek sikrer, at 20 stikprøvevers er **tegn for tegn** identiske med Tanzil-filen (SC-003). Alle 30 juz og 604 sider peger på et vers, der findes (SC-004). |
-| **Enhed** | Vitest | Arabisk normalisering, `findPage`, bogmærker (tilføj, fjern, husk). |
-| **Komponent** | Testing Library | Et vers viser versmærke og RTL. Bismillah vises korrekt. |
-| **Accept** | Playwright | Én fil pr. brugerhistorie, hvor hver *Givet/Når/Så* bliver én test. Offline-testen kører i flytilstand (SC-005). |
+| Niveau             | Værktøj         | Eksempler                                                                                                                                                                               |
+| ------------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Dataintegritet** | Vitest          | 114 suraer og 6.236 vers. Et tjek sikrer, at 20 stikprøvevers er **tegn for tegn** identiske med Tanzil-filen (SC-003). Alle 30 juz og 604 sider peger på et vers, der findes (SC-004). |
+| **Enhed**          | Vitest          | Arabisk normalisering, `findPage`, bogmærker (tilføj, fjern, husk).                                                                                                                     |
+| **Komponent**      | Testing Library | Et vers viser versmærke og RTL. Bismillah vises korrekt.                                                                                                                                |
+| **Accept**         | Playwright      | Én fil pr. brugerhistorie, hvor hver _Givet/Når/Så_ bliver én test. Offline-testen kører i flytilstand (SC-005).                                                                        |
 
 **Regel:** En opgave er først færdig, når dens tests er grønne.
 
 ## 10. Tjek mod constitution
 
-| Princip | Overholdt? | Hvordan |
-|---------|-----------|---------|
-| 1. Korrekt og lovligt indhold | ✅ | Tanzil-filerne ligger uændret. En test sammenligner tegn for tegn. Licenserne står i `licenser.md` og på About-siden. |
-| 2. Respekt og ro | ✅ | Ingen reklamer. Roligt design med teksten i fokus. |
-| 3. Privatliv | ✅ | Ingen server, intet login. Data ligger i `localStorage`. |
-| 4. Offline og mobil først | ✅ | PWA med service worker. Designet starter ved 360 px. |
-| 5. Tilgængelighed | ✅ | RTL, justerbar skrift, `aria-label`, Playwright-tjek af tastaturbrug. |
-| 6. Enkelhed | ✅ | Ingen server, ingen database, intet søgeindeks. |
-| 7. Spec før kode | ✅ | Hver route og hver test peger tilbage på en historie eller et krav. |
+| Princip                       | Overholdt? | Hvordan                                                                                                               |
+| ----------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------- |
+| 1. Korrekt og lovligt indhold | ✅         | Tanzil-filerne ligger uændret. En test sammenligner tegn for tegn. Licenserne står i `licenser.md` og på About-siden. |
+| 2. Respekt og ro              | ✅         | Ingen reklamer. Roligt design med teksten i fokus.                                                                    |
+| 3. Privatliv                  | ✅         | Ingen server, intet login. Data ligger i `localStorage`.                                                              |
+| 4. Offline og mobil først     | ✅         | PWA med service worker. Designet starter ved 360 px.                                                                  |
+| 5. Tilgængelighed             | ✅         | RTL, justerbar skrift, `aria-label`, Playwright-tjek af tastaturbrug.                                                 |
+| 6. Enkelhed                   | ✅         | Ingen server, ingen database, intet søgeindeks.                                                                       |
+| 7. Spec før kode              | ✅         | Hver route og hver test peger tilbage på en historie eller et krav.                                                   |
 
 ## 11. Åbne punkter
 
