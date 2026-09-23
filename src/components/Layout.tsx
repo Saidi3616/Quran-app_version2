@@ -29,7 +29,11 @@ export function Layout() {
         <Outlet />
       </main>
       <footer className="footer">
-        <Link to="/about">About &amp; sources</Link>
+        {/* Tanzil's terms: the source must be clearly indicated, with a link. */}
+        <p>
+          Quran text: <a href="https://tanzil.net">Tanzil.net</a> ·{' '}
+          <Link to="/about">About &amp; sources</Link>
+        </p>
       </footer>
     </>
   )

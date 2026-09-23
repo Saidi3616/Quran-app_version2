@@ -76,3 +76,21 @@ async function firstVerseWhere(
   const ayah = quran.ayahs.find(test)
   return ayah ? { sura: ayah.sura, aya: ayah.aya } : null
 }
+
+/** The copyright/source notices from the Tanzil files, for the About page (FR-017). */
+export async function getSourceNotices(): Promise<{
+  quran: string
+  translation: string
+  metadata: string
+}> {
+  const [quran, translation, suras] = await Promise.all([
+    loadJson<QuranTextFile>('quran-uthmani.json'),
+    loadJson<VerseTextFile>('en.sahih.json'),
+    loadJson<SuraListFile>('suras.json'),
+  ])
+  return {
+    quran: quran.notice,
+    translation: translation.notice,
+    metadata: suras.notice,
+  }
+}

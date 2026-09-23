@@ -94,6 +94,18 @@ _Resultat: Du kan åbne appen og læse Koranen._ 🎉
       `/sura/:n` viser alle vers. Bismillah vises som overskrift, dog ikke i sura 1 og 9.
       **Færdig når:** accepttest H1.2–H1.4 er grøn.
 
+## Mellemspil: Udgiv appen (tilføjet 2026-09-23)
+
+_Resultat: Appen kan ses på en offentlig adresse og opdateres automatisk. Brugeren ønskede at kunne se appen undervejs, så udgivelsen er rykket frem fra "senere" (plan, afsnit 12)._
+
+- [x] **T027 · About-side** _(FR-017)_ ← **rykket frem**, fordi Tanzils licens kræver kreditering, før teksten vises offentligt.
+      Siden viser kilder og licenser med link til Tanzil.net og kreditering af oversætter og skrifttype. Footeren nævner Tanzil på alle sider.
+      **Færdig når:** siden viser alt det, som licenserne kræver, og accepttesten for FR-017 er grøn.
+
+- [ ] **T030 · Udgiv på GitHub Pages** _(plan, afsnit 12)_
+      Workflowet kører alle tests og udgiver derefter appen. Direkte links som `/sura/2` skal virke.
+      **Færdig når:** appen kan åbnes på `https://saidi3616.github.io/Quran-app_version2/`, også via et direkte link til en sura.
+
 ## Milepæl 3: Navigation (H2)
 
 - [ ] **T015 · Hop til vers** _(FR-005)_
@@ -152,9 +164,7 @@ _Resultat: Du kan åbne appen og læse Koranen._ 🎉
       vite-plugin-pwa med manifest, ikon og precache af alle filer.
       **Færdig når:** Playwright-testen i flytilstand er grøn (SC-005).
 
-- [ ] **T027 · About-side** _(FR-017)_
-      Siden viser kilder og licenser fra `licenser.md` med link til Tanzil.net og kreditering af oversætter og skrifttype.
-      **Færdig når:** siden viser alt det, som licenserne kræver.
+- **T027 · About-side** → flyttet frem til "Mellemspil: Udgiv appen".
 
 - [ ] **T028 · Tilgængelighed** _(NFR-005)_
       `aria-label` på alle knapper, tjek af tastaturnavigation og kontrast.

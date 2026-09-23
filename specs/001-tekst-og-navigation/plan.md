@@ -246,4 +246,14 @@ navn og ikon gør appen installerbar.
 1. ✅ ~~Er appen gratis og ikke-kommerciel?~~ Ja. Besluttet 2026-09-23.
 2. ✅ ~~Hvordan er Bismillah markeret i Tanzils XML?~~ Som en egen attribut, se afsnit 7.
 3. ⚠️ **Nyt (T005):** `en.sahih.xml` er ikke gyldig XML (`--` i kommentaren). Byggescriptet skal fjerne kommentaren i hukommelsen før parsing.
-4. **[SENERE]** Hvor appen skal ligge på nettet (fx GitHub Pages eller Netlify). Det behøver vi ikke vide, før fase 1 er færdig. ⚠️ **Husk (fundet i T011):** Webhotellet skal sende alle ukendte adresser (fx `/sura/2`) til `index.html`, ellers giver direkte links fejl 404. GitHub Pages kan det ikke uden et trick, Netlify kan det med én linje konfiguration.
+4. ✅ ~~Hvor skal appen ligge på nettet?~~ **GitHub Pages**, besluttet 2026-09-23 (brugeren vil kunne se appen undervejs). Se afsnit 12.
+
+## 12. Udgivelse (GitHub Pages)
+
+| Emne          | Løsning                                                                                                                                                                                                                                                |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Adresse       | `https://saidi3616.github.io/Quran-app_version2/`                                                                                                                                                                                                      |
+| Hvordan       | En GitHub Actions-workflow (`.github/workflows/deploy.yml`) kører ved hvert push til `claude/sharp-brown-iwdpad`. Først køres **alle** tests (lint, format, Vitest, Playwright). Kun hvis de er grønne, bygges og udgives appen.                       |
+| Undermappe    | Appen ligger i `/Quran-app_version2/`, ikke i roden. Vite får stien via miljøvariablen `BASE_PATH`, og både data (`fetch`) og routeren bruger `import.meta.env.BASE_URL`.                                                                              |
+| Direkte links | GitHub Pages kender ikke adresser som `/sura/2`. Tricket er at kopiere `index.html` til `404.html`, så GitHub viser appen i stedet for en fejlside, og routeren finder så den rigtige skærm. (HTTP-statuskoden er stadig 404, men brugeren ser appen.) |
+| Licens        | Tanzils vilkår kræver kreditering og link, **før** teksten vises offentligt. Derfor er About-siden (T027) lavet før første udgivelse, og footeren nævner Tanzil på alle sider.                                                                         |

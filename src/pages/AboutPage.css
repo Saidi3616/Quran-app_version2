@@ -1,0 +1,18 @@
+.about h2 {
+  margin-top: calc(var(--space) * 1.5);
+  font-size: 1.15rem;
+}
+
+.about h3 {
+  font-size: 1rem;
+}
+
+.about__notice {
+  padding: 12px;
+  overflow-x: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: pre-wrap;
+}
