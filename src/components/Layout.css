@@ -7,7 +7,8 @@
 }
 
 .topbar__inner,
-.content {
+.content,
+.footer {
   max-width: var(--content-width);
   margin: 0 auto;
   padding: 0 var(--space);
@@ -22,16 +23,37 @@
 }
 
 .topbar__title {
-  margin: 0;
   font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
 }
 
-.topbar__arabic {
-  font-size: 1.5rem;
-  line-height: 1;
+.topbar__nav {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+.topbar__nav a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+/* NavLink adds the "active" class to the link for the current page. */
+.topbar__nav a.active {
   color: var(--color-accent);
+  font-weight: 600;
 }
 
 .content {
   padding-block: var(--space);
+}
+
+.footer {
+  padding-block: calc(var(--space) * 2);
+  font-size: 0.9rem;
 }

@@ -1,19 +1,36 @@
-import type { ReactNode } from 'react'
+import { Link, NavLink, Outlet } from 'react-router'
 import './Layout.css'
 
-/** The frame around every screen: a top bar and the content below it. */
-export function Layout({ children }: { children: ReactNode }) {
+/** The frame around every screen: a top bar with the menu, the page, and a footer. */
+export function Layout() {
   return (
     <>
       <header className="topbar">
         <div className="topbar__inner">
-          <h1 className="topbar__title">Quran</h1>
-          <span className="topbar__arabic arabic" lang="ar" aria-hidden="true">
-            القرآن الكريم
-          </span>
+          <Link to="/" className="topbar__title">
+            Quran
+          </Link>
+          <nav aria-label="Main">
+            <ul className="topbar__nav">
+              <li>
+                <NavLink to="/search">Search</NavLink>
+              </li>
+              <li>
+                <NavLink to="/bookmarks">Bookmarks</NavLink>
+              </li>
+              <li>
+                <NavLink to="/settings">Settings</NavLink>
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
-      <main className="content">{children}</main>
+      <main className="content">
+        <Outlet />
+      </main>
+      <footer className="footer">
+        <Link to="/about">About &amp; sources</Link>
+      </footer>
     </>
   )
 }

@@ -246,4 +246,4 @@ navn og ikon gør appen installerbar.
 1. ✅ ~~Er appen gratis og ikke-kommerciel?~~ Ja. Besluttet 2026-09-23.
 2. ✅ ~~Hvordan er Bismillah markeret i Tanzils XML?~~ Som en egen attribut, se afsnit 7.
 3. ⚠️ **Nyt (T005):** `en.sahih.xml` er ikke gyldig XML (`--` i kommentaren). Byggescriptet skal fjerne kommentaren i hukommelsen før parsing.
-4. **[SENERE]** Hvor appen skal ligge på nettet (fx GitHub Pages eller Netlify). Det behøver vi ikke vide, før fase 1 er færdig.
+4. **[SENERE]** Hvor appen skal ligge på nettet (fx GitHub Pages eller Netlify). Det behøver vi ikke vide, før fase 1 er færdig. ⚠️ **Husk (fundet i T011):** Webhotellet skal sende alle ukendte adresser (fx `/sura/2`) til `index.html`, ellers giver direkte links fejl 404. GitHub Pages kan det ikke uden et trick, Netlify kan det med én linje konfiguration.

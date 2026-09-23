@@ -78,7 +78,7 @@ _Resultat: Du kan åbne appen og læse Koranen._ 🎉
       Installer `@fontsource/amiri-quran`, og læg licensfilen ved. Lav et grundlayout med topbar og indhold, bygget til 360 px (NFR-003).
       **Færdig når:** arabisk tekst vises i Amiri Quran.
 
-- [ ] **T011 · Routing**
+- [x] **T011 · Routing**
       Sæt React Router op med de routes, der står i plan afsnit 5. Siderne må gerne være tomme foreløbig.
       **Færdig når:** alle URL'er viser deres (tomme) side, og tilbage-knappen virker.
 
