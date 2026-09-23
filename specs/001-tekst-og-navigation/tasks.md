@@ -54,7 +54,7 @@ _Resultat: Koranens tekst ligger i projektet, og testene beviser, at den er korr
       Skriv `Sura`, `Ayah`, `VerseKey` osv. i `src/quran/types.ts` (plan, afsnit 6).
       **Færdig når:** filen kan kompileres (`npm run build`).
 
-- [ ] **T007 · Byggescript: XML → JSON**
+- [x] **T007 · Byggescript: XML → JSON**
       Skriv `scripts/build-data.ts`, der læser filerne i `data/tanzil/` og skriver `public/data/suras.json`, `quran-uthmani.json`, `quran-clean.json` og `en.sahih.json`. Scriptet kører automatisk før `dev` og `build`.
       **Færdig når:** JSON-filerne bliver lavet, og `public/data/` er med i `.gitignore`, fordi de genereres.
 

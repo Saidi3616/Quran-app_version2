@@ -147,10 +147,10 @@ interface Ayah {
   page: number // 1–604
 }
 
-interface TranslatedAyah {
+interface VerseText {
   sura: number
   aya: number
-  text: string // Sahih International, uændret fra Tanzil
+  text: string // Simple Clean (søgning) eller Sahih International, uændret fra Tanzil
 }
 
 interface Bookmark {
