@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Fase** | 1 af 5 (se [`../vision.md`](../vision.md)) |
-| **Status** | Udkast |
+| **Status** | Klar til plan |
 | **Oprettet** | 2026-09-23 |
 | **Principper** | [`../constitution.md`](../constitution.md) |
 
@@ -91,7 +91,7 @@ Historierne er prioriteret. **P1** skal virke, før vi går videre til P2 og så
 | FR-004 | Hvert vers SKAL afsluttes med et tydeligt arabisk versmærke med versnummer. | 1 |
 | FR-005 | Brugeren SKAL kunne navigere direkte til sura, sura:vers, juz (1–30) og mushaf-side (1–604). | 2 |
 | FR-006 | Læsevisningen SKAL vise aktuel sura, juz og side. | 2 |
-| FR-007 | Systemet SKAL tilbyde en engelsk oversættelse, som brugeren kan slå til og fra. Der er ingen oversættelser på andre sprog. [AFKLARES: hvilken?] | 3 |
+| FR-007 | Systemet SKAL tilbyde en engelsk oversættelse, som brugeren kan slå til og fra. Oversættelsen er **Sahih International** (forudsat at licensen godkendes i [`../licenser.md`](../licenser.md)). Der er ingen oversættelser på andre sprog. | 3 |
 | FR-008 | Oversætter og kilde SKAL vises for oversættelsen. | 3 |
 | FR-009 | Brugeren SKAL kunne tilføje, se og fjerne bogmærker på versniveau. | 4 |
 | FR-010 | Systemet SKAL automatisk huske seneste læseposition og tilbyde "Fortsæt læsning". | 4 |
@@ -102,6 +102,7 @@ Historierne er prioriteret. **P1** skal virke, før vi går videre til P2 og så
 | FR-015 | Appen SKAL understøtte lyst tema, mørkt tema og "følg system". | 6 |
 | FR-016 | Alle brugerdata og indstillinger SKAL gemmes lokalt og overleve genstart. | 4, 6 |
 | FR-017 | Appen SKAL have en "Om"-side med kilde og licens for alt indhold (se [`../licenser.md`](../licenser.md)). | – |
+| FR-018 | Appens menuer, knapper og beskeder SKAL være på engelsk. | – |
 
 ## 4. Ikke-funktionelle krav
 
@@ -151,10 +152,11 @@ Fase 1 er færdig, når:
 ### Besluttet
 - ✅ Teksten vises i **Uthmani-skrift**.
 - ✅ Der er **kun engelsk** oversættelse (ingen dansk).
+- ✅ Oversættelsen er **Sahih International**.
+- ✅ Menuer og knapper er på **engelsk**.
+- ✅ Skriftstørrelse og dark mode hører til **fase 1**, fordi god læsbarhed er vigtig fra dag ét.
 - ✅ Gentagelse af vers og udsnit hører til **fase 2 (lyd)**.
 - ✅ Flere reciters hører til **fase 2**. Valget af reciters træffes der.
 
-### Åbne spørgsmål (lektie til dig)
-1. **[AFKLARES]** Skal menuer og knapper være på **dansk**, **engelsk** eller begge dele (brugeren vælger)?
-2. **[AFKLARES]** Hvilken **engelsk** oversættelse? (fx Sahih International eller The Clear Quran). Hvis du ikke har et ønske, undersøger vi licenserne sammen i `plan.md`.
-3. **[AFKLARES]** Skal skriftstørrelse og dark mode blive i fase 1? Jeg har lagt dem her, fordi de er små at lave og hører med til god læsbarhed fra dag ét. I din plan lå de i fase 4.
+### Åbne spørgsmål
+Ingen. Spec'en er klar til `plan.md`.
