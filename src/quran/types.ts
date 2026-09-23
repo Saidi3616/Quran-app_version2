@@ -4,6 +4,12 @@
 /** Unique reference to a verse, written as "sura:aya", e.g. "2:255". */
 export type VerseKey = `${number}:${number}`
 
+/** A place in the Quran, e.g. { sura: 2, aya: 255 }. */
+export interface VerseRef {
+  sura: number
+  aya: number
+}
+
 /** Where a sura was revealed. The values match Tanzil's metadata. */
 export type Revelation = 'Meccan' | 'Medinan'
 

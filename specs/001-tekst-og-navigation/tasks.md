@@ -66,7 +66,7 @@ _Resultat: Koranens tekst ligger i projektet, og testene beviser, at den er korr
   - oversættelsen har præcis ét vers for hvert arabisk vers.
     **Færdig når:** testene er grønne. _Det er den vigtigste test i hele projektet (princip 1)._
 
-- [ ] **T009 · Modulet `quran/`**
+- [x] **T009 · Modulet `quran/`**
       Funktionerne `getSuras()`, `getSura(n)`, `getTranslation(n)`, `findJuz(j)` og `findPage(p)`. De indlæser JSON-filerne og gemmer dem i hukommelsen, så de kun hentes én gang.
       **Færdig når:** der er enhedstests for hver funktion, og de er grønne.
 
