@@ -3,9 +3,10 @@
 Disse regler gælder for **alle** features. Når vi er i tvivl om en beslutning, kigger vi her.
 Principperne ændres kun bevidst, og ændringen skrives i historikken nederst.
 
-## 1. Tekstens nøjagtighed kommer først
-- Quran-teksten hentes fra en anerkendt, verificeret kilde og redigeres **aldrig** i hånden.
-- Kilden og dens licens står altid i appen og i dokumentationen.
+## 1. Korrekt og lovligt indhold kommer først
+- Koranens tekst, oversættelser, tafsir og lyd hentes fra anerkendte, pålidelige kilder (fx Quran.com API eller Tanzil.net) og redigeres **aldrig** i hånden.
+- Intet indhold tages i brug, før licensen er tjekket og skrevet i [`licenser.md`](licenser.md).
+- Kilde og licens står altid i appen på "Om"-siden.
 - Hvis vi er i tvivl om, hvordan et vers vises korrekt, viser vi hellere intet end noget forkert.
 
 ## 2. Respekt og ro
@@ -38,3 +39,4 @@ Principperne ændres kun bevidst, og ændringen skrives i historikken nederst.
 ---
 **Historik**
 - v1.0 (2026-09-23): Første udkast.
+- v1.1 (2026-09-23): Princip 1 dækker nu alt indhold (også oversættelser, tafsir og lyd) og kræver licenstjek.
