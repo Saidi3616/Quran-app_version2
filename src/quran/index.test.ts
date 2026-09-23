@@ -1,5 +1,5 @@
-import { readFileSync } from 'node:fs'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
+import { fakeFetch } from '../test/fakeFetch'
 import {
   findJuz,
   findPage,
@@ -8,24 +8,8 @@ import {
   getTranslation,
   verseExists,
 } from './index'
-import { clearCache } from './load'
 
-// In tests there is no web server, so we replace fetch() with a fake
-// that reads the generated files in public/data/ from disk.
-const fakeFetch = vi.fn(async (url: string) => {
-  const file = url.split('/').pop()
-  return new Response(readFileSync(`public/data/${file}`, 'utf8'))
-})
-
-beforeEach(() => {
-  clearCache()
-  fakeFetch.mockClear()
-  vi.stubGlobal('fetch', fakeFetch)
-})
-
-afterEach(() => {
-  vi.unstubAllGlobals()
-})
+// fetch() is replaced by fakeFetch in src/test/setup.ts.
 
 describe('getSuras', () => {
   it('returns all 114 suras', async () => {

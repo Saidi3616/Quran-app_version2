@@ -82,7 +82,7 @@ _Resultat: Du kan åbne appen og læse Koranen._ 🎉
       Sæt React Router op med de routes, der står i plan afsnit 5. Siderne må gerne være tomme foreløbig.
       **Færdig når:** alle URL'er viser deres (tomme) side, og tilbage-knappen virker.
 
-- [ ] **T012 · Suraliste** _(FR-001)_
+- [x] **T012 · Suraliste** _(FR-001)_
       Forsiden viser 114 suraer med nummer, arabisk navn, translittereret navn, antal vers og Mekka/Medina.
       **Færdig når:** accepttest H1.1 er grøn.
 
