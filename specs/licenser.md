@@ -1,12 +1,14 @@
 # Licenser for indhold
 
+Vilkårene for Tanzils tekst og oversættelse er **læst direkte på Tanzil.net den 2026-09-23** og citeret i [`../data/tanzil/README.md`](../data/tanzil/README.md).
+
 Intet indhold (tekst, oversættelse, tafsir eller lyd) må bruges i appen, før det står her med
 status **✅ Godkendt**. Det følger af princip 1 i [`constitution.md`](constitution.md).
 
 | Indhold                                     | Kilde                                                              | Licens / vilkår                                                            | Krav (fx kreditering)                                                   | Status                                                                      |
 | ------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | Arabisk tekst (Uthmani + Simple Clean)      | [Tanzil.net](https://tanzil.net/docs/text_license)                 | Creative Commons Attribution 3.0. Må kun bruges uændret.                   | Kreditér Tanzil.net med link. Copyright-teksten skal følge med filerne. | ✅ Godkendt                                                                 |
-| Quran-metadata (suraer, juz, sider)         | [Tanzil.net](https://tanzil.net/docs/)                             | Samme som teksten                                                          | Samme som teksten                                                       | ✅ Godkendt                                                                 |
+| Quran-metadata (suraer, juz, sider)         | [Tanzil.net](https://tanzil.net/docs/)                             | CC BY (angivet i filen: `license="cc-by"`)                                 | Kreditér Tanzil                                                         | ✅ Godkendt                                                                 |
 | Oversættelse: engelsk (Sahih International) | [Tanzil.net](https://tanzil.net/trans/), udgivet af Dar Abul-Qasim | Kun ikke-kommerciel brug. Kommerciel brug kræver tilladelse fra udgiveren. | Nævn oversætter og kilde.                                               | ✅ Godkendt (appen er gratis og ikke-kommerciel, se constitution princip 2) |
 | Skrifttype: Amiri Quran                     | [Amiri-projektet](https://github.com/aliftype/amiri)               | SIL Open Font License 1.1                                                  | Licensfilen skal følge med skriften.                                    | ✅ Godkendt                                                                 |
 

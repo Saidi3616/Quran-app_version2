@@ -40,7 +40,7 @@ _Resultat: Et tomt React-projekt, der kører, og hvor testene er sat op._
 
 _Resultat: Koranens tekst ligger i projektet, og testene beviser, at den er korrekt._
 
-- [ ] **T004 · Hent Tanzil-filerne** _(din opgave, se "Sådan henter du filerne" nederst)_
+- [x] **T004 · Hent Tanzil-filerne** _(din opgave, se "Sådan henter du filerne" nederst)_
       Læg filerne **uændret** i `data/tanzil/` sammen med en `README.md`, der noterer kilde, dato, version, valgte download-indstillinger og copyright-teksten.
       Filerne er: Uthmani-tekst (XML), Simple Clean-tekst (XML), Quran-metadata (XML) og Sahih International `en.sahih` (XML).
       **Færdig når:** de fire filer og README'en er committet.
