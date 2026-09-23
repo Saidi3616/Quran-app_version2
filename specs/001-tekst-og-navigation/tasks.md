@@ -90,7 +90,7 @@ _Resultat: Du kan åbne appen og læse Koranen._ 🎉
       Et vers vises RTL og slutter med `۝` plus versnummeret med arabiske cifre.
       **Færdig når:** komponenttesten er grøn (tallet 12 bliver til `١٢`, og teksten har `dir="rtl"`).
 
-- [ ] **T014 · Læsevisning** _(FR-002)_
+- [x] **T014 · Læsevisning** _(FR-002)_
       `/sura/:n` viser alle vers. Bismillah vises som overskrift, dog ikke i sura 1 og 9.
       **Færdig når:** accepttest H1.2–H1.4 er grøn.
 

@@ -4,7 +4,9 @@ import { expect, test } from '@playwright/test'
 
 test('a link can open a screen directly', async ({ page }) => {
   await page.goto('/sura/2/255')
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Sura 2')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText(
+    '2. Al-Baqara',
+  )
 })
 
 test('the back button returns to the previous screen', async ({ page }) => {

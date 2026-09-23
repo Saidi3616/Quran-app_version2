@@ -15,8 +15,8 @@ function renderAt(url: string) {
 describe('App routes (plan, section 5)', () => {
   it.each([
     ['/', 'Suras'],
-    ['/sura/2', 'Sura 2'],
-    ['/sura/2/255', 'Sura 2'],
+    ['/sura/2', 'Al-Baqara'],
+    ['/sura/2/255', 'Al-Baqara'],
     ['/juz/30', 'Juz 30'],
     ['/page/604', 'Page 604'],
     ['/search', 'Search'],
@@ -24,9 +24,11 @@ describe('App routes (plan, section 5)', () => {
     ['/settings', 'Settings'],
     ['/about', 'About'],
     ['/does-not-exist', 'Page not found'],
-  ])('%s shows "%s"', (url, heading) => {
+  ])('%s shows "%s"', async (url, heading) => {
     renderAt(url)
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(heading)
+    expect(await screen.findByRole('heading', { level: 1 })).toHaveTextContent(
+      heading,
+    )
   })
 
   it('shows the menu on every page', () => {
