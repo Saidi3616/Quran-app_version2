@@ -57,7 +57,7 @@ indstillinger gemmes i browserens `localStorage`.
 
 - **Tanzil Uthmani-tekst:** Creative Commons Attribution 3.0. Teksten må kun bruges **uændret**. Tanzil.net skal krediteres med et link, og copyright-teksten skal følge med filerne.
 - **Sahih International via Tanzil:** må kun bruges **ikke-kommercielt**. Kommerciel brug kræver tilladelse fra udgiveren (Dar Abul-Qasim).
-  → Vi antager, at appen er **gratis og ikke-kommerciel**. Det stemmer med princip 2 i constitution (ingen reklamer).
+  → Appen er **gratis og ikke-kommerciel** (besluttet, constitution princip 2), så vilkåret er opfyldt.
 
 ### Hvilke filer vi henter
 
@@ -217,6 +217,6 @@ navn og ikon gør appen installerbar.
 
 ## 11. Åbne punkter
 
-1. **[AFKLARES]** Bekræft, at appen er **gratis og ikke-kommerciel**. Det er et krav for at bruge Sahih International via Tanzil.
+1. ✅ ~~Er appen gratis og ikke-kommerciel?~~ Ja. Besluttet 2026-09-23.
 2. **[TJEKKES I OPGAVE 1]** Hvordan Bismillah er markeret i Tanzils XML (se afsnit 7).
 3. **[SENERE]** Hvor appen skal ligge på nettet (fx GitHub Pages eller Netlify). Det behøver vi ikke vide, før fase 1 er færdig.

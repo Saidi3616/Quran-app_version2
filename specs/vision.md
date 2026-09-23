@@ -51,6 +51,7 @@ besluttes i hver features `plan.md`. Vi ved allerede nu:
 | Risiko | Fase | Hvorfor |
 |--------|------|---------|
 | Licens til engelsk oversættelse | 1 | Mange kendte engelske oversættelser er ophavsretligt beskyttet. Vi skal finde én, vi har lov til at bruge. |
+| Licens til lyd | 2 | Hver recitation tilhører reciteren. Forundersøgelsen peger på EveryAyah og Al Quran Cloud (gratis, ikke-kommerciel brug), men vilkårene skal bekræftes. Se [`licenser.md`](licenser.md). |
 | Offline lyd fylder meget | 2 | Hele Koranen med én reciter fylder flere hundrede MB. Brugeren skal kunne vælge, hvad der downloades. |
 | Tajweed-farver kræver særlige data | 3 | Farverne skal komme fra en kilde, hvor tajweed-reglerne allerede er markeret. Vi laver dem ikke selv. |
 | Notifikationer i en web-app | 5 | På iPhone virker notifikationer kun, hvis appen er lagt på hjemmeskærmen. |

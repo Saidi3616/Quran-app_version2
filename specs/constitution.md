@@ -10,6 +10,7 @@ Principperne ændres kun bevidst, og ændringen skrives i historikken nederst.
 - Hvis vi er i tvivl om, hvordan et vers vises korrekt, viser vi hellere intet end noget forkert.
 
 ## 2. Respekt og ro
+- Appen er **gratis og ikke-kommerciel**. Flere af vores indholdslicenser (fx Sahih International og lydfilerne) kræver det.
 - Ingen reklamer, ingen popups og ingen gamification, der forstyrrer læsningen.
 - Designet er roligt og læsbart, og den arabiske tekst er i fokus.
 
@@ -40,3 +41,4 @@ Principperne ændres kun bevidst, og ændringen skrives i historikken nederst.
 **Historik**
 - v1.0 (2026-09-23): Første udkast.
 - v1.1 (2026-09-23): Princip 1 dækker nu alt indhold (også oversættelser, tafsir og lyd) og kræver licenstjek.
+- v1.2 (2026-09-23): Princip 2 slår fast, at appen er gratis og ikke-kommerciel.
