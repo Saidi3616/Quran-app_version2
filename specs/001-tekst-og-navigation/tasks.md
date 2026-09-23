@@ -86,7 +86,7 @@ _Resultat: Du kan åbne appen og læse Koranen._ 🎉
       Forsiden viser 114 suraer med nummer, arabisk navn, translittereret navn, antal vers og Mekka/Medina.
       **Færdig når:** accepttest H1.1 er grøn.
 
-- [ ] **T013 · Komponenterne `Verse` og `VerseMarker`** _(FR-003, FR-004)_
+- [x] **T013 · Komponenterne `Verse` og `VerseMarker`** _(FR-003, FR-004)_
       Et vers vises RTL og slutter med `۝` plus versnummeret med arabiske cifre.
       **Færdig når:** komponenttesten er grøn (tallet 12 bliver til `١٢`, og teksten har `dir="rtl"`).
 

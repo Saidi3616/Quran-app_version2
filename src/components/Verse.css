@@ -1,0 +1,10 @@
+.verse {
+  margin: 0;
+  padding: 12px 0;
+  text-align: right;
+}
+
+.verse-marker {
+  color: var(--color-accent);
+  white-space: nowrap;
+}
