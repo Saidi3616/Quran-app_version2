@@ -1,5 +1,7 @@
 # Quran-app (version 2)
 
+> ⏸️ **På pause siden 2026-09-24.** Se status og næste skridt øverst i [`specs/001-tekst-og-navigation/tasks.md`](specs/001-tekst-og-navigation/tasks.md).
+
 En web-app (PWA) til at læse, lytte til og forstå Koranen, og som hjælper med udenadslære (hifz).
 
 **Prøv appen:** https://saidi3616.github.io/Quran-app_version2/ (opdateres automatisk ved hvert push, når alle tests er grønne).

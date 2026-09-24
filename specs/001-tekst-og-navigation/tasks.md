@@ -6,6 +6,18 @@
 | **Plan**   | [`plan.md`](plan.md) |
 | **Status** | Klar                 |
 
+> ⏸️ **PÅ PAUSE siden 2026-09-24** (ejerens beslutning).
+>
+> **Her slap vi:** Milepæl 0, 1 og 2 samt T027 og T030 er færdige (16 af 30 opgaver). Appen kører på
+> https://saidi3616.github.io/Quran-app_version2/. **Næste opgave: T015 · Hop til vers.**
+>
+> **Når projektet genoptages:**
+>
+> - Byg **synligt først**: hvert skridt skal ende med noget, ejeren kan se og klikke på (link + skærmbillede).
+> - Ejeren skriver selv prompten til hver opgave og får en score og feedback, før den bygges.
+> - Idéer fra v1 til overvejelse i spec'en: visningstilstande (arabisk/oversættelse/begge),
+>   juz-fane på forsiden, uddrag af verset i bogmærker, markering af sidst læste sura.
+
 ## Sådan bruger du listen
 
 - Vi tager **én opgave ad gangen**, oppefra og ned.
